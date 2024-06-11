@@ -76,7 +76,7 @@ def load_train_data():
     #graph_4_4 = torch.load(graphs_dir + "/graph_4_4_50per.TemporalData.simple").to(device=device)
     return [graph_4_2, graph_4_3, graph_4_4]
     #return [graph_4_3, graph_4_4]
-    return [graph_4_4]
+    #return [graph_4_4]
     
 def init_models(node_feat_size):
     memory = TGNMemory(
@@ -133,4 +133,4 @@ if __name__ == "__main__":
     model = [memory, gnn, link_pred, neighbor_loader]
 
     os.system(f"mkdir -p {models_dir}")
-    torch.save(model, f"{models_dir}/models_5per.pt")
+    torch.save(model, f"{models_dir}/models.pt")
