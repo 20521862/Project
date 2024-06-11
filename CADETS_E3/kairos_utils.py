@@ -2,8 +2,6 @@ import pytz
 from time import mktime
 from datetime import datetime
 import time
-import psycopg2
-from psycopg2 import extras as ex
 import os.path as osp
 import os
 import copy
